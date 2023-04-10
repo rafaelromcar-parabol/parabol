@@ -6,8 +6,8 @@ env:
   NODE_VERSION: 18.14.2
   PARABOL_DOCKER_REPOSITORY_DEV: parabol-dev
   PARABOL_DOCKER_REPOSITORY_PROD: parabol-prod
-  PARABOL_DOCKERFILE: docker/parabol-ubi/dockerfiles/pipeline.dockerfile
-  PARABOL_BUILD_ENV_PATH: docker/parabol-ubi/environments/pipeline
+  PARABOL_DOCKERFILE: docker/parabol-ubi/docker-build/dockerfiles/pipeline.dockerfile
+  PARABOL_BUILD_ENV_PATH: docker/parabol-ubi/docker-build/environments/pipeline
 
 jobs:
   build-and-push:
@@ -40,15 +40,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-
-      - name: Check folder structure
-        run: |
-          pwd
-          ls -lh
-
-      - name: Check running services
-        run: |
-          docker ps
 
       - name: Build the Docker image
         run: |
