@@ -3,42 +3,63 @@ name: Build Docker image
 on: [push]
 
 env:
+  NODE_VERSION: 18.14.2
   POSTGRESQL_TAG: 12.10-alpine
   RETHINKDB_TAG: 2.4.0
   REDIS_TAG: 6.2.6
   PARABOL_DOCKER_REPOSITORY_DEV: parabol-dev
   PARABOL_DOCKER_REPOSITORY_PROD: parabol-prod
-
+  PARABOL_DOCKERFILE: docker/parabol-ubi/dockerfiles/pipeline.dockerfile
+  PARABOL_BUILD_ENV_PATH: docker/parabol-ubi/environments/pipeline
 
 jobs:
   build-and-push:
     runs-on: ubuntu-22.04
+    services:
+      rethinkdb:
+        image: rethinkdb:${RETHINKDB_TAG}
+        ports:
+          - 8080:8080
+          - 28015:28015
+          - 29015:29015
+      redis:
+        image: redis:${REDIS_TAG}
+        ports:
+          - 6379:6379
+      postgres:
+        image: postgres:${POSTGRESQL_TAG}
+        env:
+          POSTGRES_PASSWORD: "temppassword"
+          POSTGRES_USER: "tempuser"
+          POSTGRES_DB: "tempdb"
+        ports:
+          - 5432:5432
+        # Set health checks to wait until postgres has started
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
     steps:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Start databases
-        run: |
-          docker run --name temp-postgres --network=host -e POSTGRES_PASSWORD=temppassword -e POSTGRES_USER=tempuser -e POSTGRES_DB=tempdb -d -p 5432:5432 postgres:${POSTGRESQL_TAG}
-          docker run --name temp-rethinkdb --network=host -d -p 28015:28015 -p 29015:29015 -p 8080:8080 rethinkdb:${RETHINKDB_TAG}
-          docker run --name temp-redis --network=host -d -p 6379:6379 redis:${REDIS_TAG}
-          docker ps
-
       - name: Build the Docker image
         run: |
-          echo ${PARABOL_DOCKER_REPOSITORY_DEV]:${github.sha}
+          docker build -t ${PARABOL_DOCKER_REPOSITORY_DEV}:${github.sha} -f ${PARABOL_DOCKERFILE} --build-arg _NODE_VERSION=${NODE_VERSION} --build-arg _BUILD_ENV_PATH=${PARABOL_BUILD_ENV_PATH} .
           if [ ${github.ref_type} = "tag" ]; then
-            echo ${PARABOL_DOCKER_REPOSITORY_PROD]:${github.ref_name}
+            docker tag ${PARABOL_DOCKER_REPOSITORY_PROD}:${github.ref_name}
           else
-            echo ${PARABOL_DOCKER_REPOSITORY_DEV]:${github.ref_name}
+            docker tag ${PARABOL_DOCKER_REPOSITORY_DEV}:${github.ref_name}
           fi
+          docker images
 
       - name: Push the Docker images
         run: |
           echo "Authenticate to the Docker repositories"
-          echo ${PARABOL_DOCKER_REPOSITORY_DEV]:${github.sha}
+          echo ${PARABOL_DOCKER_REPOSITORY_DEV}:${github.sha}
           if [ ${github.ref_type} = "tag" ]; then
-            echo ${PARABOL_DOCKER_REPOSITORY_PROD]:${github.ref_name}
+            echo ${PARABOL_DOCKER_REPOSITORY_PROD}:${github.ref_name}
           else
-            echo ${PARABOL_DOCKER_REPOSITORY_DEV]:${github.ref_name}
+            echo ${PARABOL_DOCKER_REPOSITORY_DEV}:${github.ref_name}
           fi
