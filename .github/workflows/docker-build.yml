@@ -19,22 +19,23 @@ jobs:
           docker run --name temp-postgres --network=host -e POSTGRES_PASSWORD=temppassword -e POSTGRES_USER=tempuser -e POSTGRES_DB=tempdb -d -p 5432:5432 postgres:${POSTGRESQL_TAG}
           docker run --name temp-rethinkdb --network=host -d -p 28015:28015 -p 29015:29015 -p 8080:8080 rethinkdb:${RETHINKDB_TAG}
           docker run --name temp-redis --network=host -d -p 6379:6379 redis:${REDIS_TAG}
+          docker ps
 
       - name: Build the Docker image
         run: |
-          echo "Build docker image as ${PARABOL_DOCKER_REPOSITORY_DEV]:${github.sha}"
+          echo ${PARABOL_DOCKER_REPOSITORY_DEV]:${github.sha}
           if [ ${github.ref_type} = "tag" ]; then
-            echo "Retagging the built image as ${PARABOL_DOCKER_REPOSITORY_PROD]:${github.ref_name}"
+            echo ${PARABOL_DOCKER_REPOSITORY_PROD]:${github.ref_name}
           else
-            echo "Retagging the built image as ${PARABOL_DOCKER_REPOSITORY_DEV]:${github.ref_name}"
+            echo ${PARABOL_DOCKER_REPOSITORY_DEV]:${github.ref_name}
           fi
 
       - name: Push the Docker images
         run: |
           echo "Authenticate to the Docker repositories"
-          echo "Push ${PARABOL_DOCKER_REPOSITORY_DEV]:${github.sha}"
+          echo ${PARABOL_DOCKER_REPOSITORY_DEV]:${github.sha}
           if [ ${github.ref_type} = "tag" ]; then
-            echo "Push ${PARABOL_DOCKER_REPOSITORY_PROD]:${github.ref_name}"
+            echo ${PARABOL_DOCKER_REPOSITORY_PROD]:${github.ref_name}
           else
-            echo "Push ${PARABOL_DOCKER_REPOSITORY_DEV]:${github.ref_name}"
+            echo ${PARABOL_DOCKER_REPOSITORY_DEV]:${github.ref_name}
           fi
