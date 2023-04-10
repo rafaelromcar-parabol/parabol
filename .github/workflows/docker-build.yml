@@ -4,9 +4,6 @@ on: [push]
 
 env:
   NODE_VERSION: 18.14.2
-  POSTGRESQL_TAG: 12.10-alpine
-  RETHINKDB_TAG: 2.4.0
-  REDIS_TAG: 6.2.6
   PARABOL_DOCKER_REPOSITORY_DEV: parabol-dev
   PARABOL_DOCKER_REPOSITORY_PROD: parabol-prod
   PARABOL_DOCKERFILE: docker/parabol-ubi/dockerfiles/pipeline.dockerfile
@@ -17,17 +14,17 @@ jobs:
     runs-on: ubuntu-22.04
     services:
       rethinkdb:
-        image: rethinkdb:${RETHINKDB_TAG}
+        image: rethinkdb:2.4.0
         ports:
           - 8080:8080
           - 28015:28015
           - 29015:29015
       redis:
-        image: redis:${REDIS_TAG}
+        image: redis:6.2.6
         ports:
           - 6379:6379
       postgres:
-        image: postgres:${POSTGRESQL_TAG}
+        image: postgres:12.10-alpine
         env:
           POSTGRES_PASSWORD: "temppassword"
           POSTGRES_USER: "tempuser"
@@ -43,6 +40,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
+      - name: Check running services
+        run: |
+          docker ps
 
       - name: Build the Docker image
         run: |
