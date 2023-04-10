@@ -41,6 +41,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Check folder structure
+        run: |
+          pwd
+          ls -lh
+
       - name: Check running services
         run: |
           docker ps
