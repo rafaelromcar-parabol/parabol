@@ -48,18 +48,21 @@ jobs:
       - name: Build the Docker image
         run: |
           docker build --network=host -t ${PARABOL_DOCKER_REPOSITORY_DEV}:${{github.sha}} -f ${PARABOL_DOCKERFILE} --build-arg _NODE_VERSION=${NODE_VERSION} --build-arg _BUILD_ENV_PATH=${PARABOL_BUILD_ENV_PATH} .
-          if [ ${github.ref_type} = "tag" ]; then
+          if [ ${{github.ref_type}} = "tag" ]; then
             docker tag ${PARABOL_DOCKER_REPOSITORY_PROD}:${{github.ref_name}}
           else
             docker tag ${PARABOL_DOCKER_REPOSITORY_DEV}:${{github.ref_name}}
           fi
+
+      - name: List produced Docker images
+        run: |
           docker images
 
       - name: Push the Docker images
         run: |
           echo "Authenticate to the Docker repositories"
           echo ${PARABOL_DOCKER_REPOSITORY_DEV}:${{github.sha}}
-          if [ ${github.ref_type} = "tag" ]; then
+          if [ ${{github.ref_type}} = "tag" ]; then
             echo ${PARABOL_DOCKER_REPOSITORY_PROD}:${{github.ref_name}}
           else
             echo ${PARABOL_DOCKER_REPOSITORY_DEV}:${{github.ref_name}}
