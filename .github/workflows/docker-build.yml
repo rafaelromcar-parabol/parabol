@@ -41,6 +41,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Check running services
+        run: |
+          docker ps
+
       - name: Build the Docker image
         run: |
           docker build -t ${PARABOL_DOCKER_REPOSITORY_DEV}:${{github.sha}} -f ${PARABOL_DOCKERFILE} --build-arg _NODE_VERSION=${NODE_VERSION} --build-arg _BUILD_ENV_PATH=${PARABOL_BUILD_ENV_PATH} .
