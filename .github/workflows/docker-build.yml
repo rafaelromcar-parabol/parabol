@@ -56,7 +56,10 @@ jobs:
 
       - name: List produced Docker images
         run: |
-          docker images
+          docker images ${PARABOL_DOCKER_REPOSITORY_DEV}
+          if [ ${{github.ref_type}} = "tag" ]; then
+            docker images ${PARABOL_DOCKER_REPOSITORY_PROD}
+          fi
 
       - name: Push the Docker images
         run: |
