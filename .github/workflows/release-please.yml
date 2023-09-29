@@ -11,4 +11,11 @@ jobs:
         with:
           release-type: node
           package-name: parabol
+          extra-files: |
+            packages/chronos/package.json
+            packages/client/package.json
+            packages/gql-executor/package.json
+            packages/integration-tests/package.json
+            packages/server/package.json
           changelog-types: '[{"type":"feat","section":"Features","hidden":false},{"type":"fix","section":"Bug Fixes","hidden":false},{"type":"chore","section":"Miscellaneous","hidden":false}]'
+          bootstrap-sha: fb647e430aa9a514dda61ab112c59d065383ca2a
