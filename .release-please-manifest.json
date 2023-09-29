@@ -1,0 +1,9 @@
+{
+  "extra-files": [
+    {
+      "type": "json",
+      "path": "packages/chronos/package.json",
+      "jsonpath": ".version"
+    }
+  ]
+}
