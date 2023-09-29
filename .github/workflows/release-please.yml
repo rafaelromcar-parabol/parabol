@@ -11,7 +11,7 @@ jobs:
       - uses: google-github-actions/release-please-action@v3
         with:
           command: manifest
-          # default-branch: ${{ github.ref_name }}
+          default-branch: ${{ github.ref_name }}
           # extra-files: |
           #   packages/chronos/package.json
           #   packages/client/package.json
