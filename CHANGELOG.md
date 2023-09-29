@@ -5,6 +5,24 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 This CHANGELOG follows conventions [outlined here](http://keepachangelog.com/).
 
+## 6.122.0 (2023-09-29)
+
+
+### Features
+
+* **ci:** add staging branch for the Action and make the default branch dynamic ([7d6dbce](https://github.com/rafaelromcar-parabol/parabol/commit/7d6dbcee51929c5802d0ec9e8fbe7994a72d7d51))
+* **ci:** bootstrap release-please to an specific commit ([3a93f88](https://github.com/rafaelromcar-parabol/parabol/commit/3a93f88b53a8cd92b9b228a9d6806f6b6cd87ca0))
+
+
+### Bug Fixes
+
+* **ci:** adding default branch ([acf47af](https://github.com/rafaelromcar-parabol/parabol/commit/acf47af82b700218d3e33fe5b393ce12f9581f82))
+* **ci:** mark next version to release as 6.122.0 and add the flag to update packages versions ([718dbcd](https://github.com/rafaelromcar-parabol/parabol/commit/718dbcdd2a39496c0262b14da76204efb3e0ed0a))
+* **ci:** starting release on a commit pushed to this branch ([7b142ee](https://github.com/rafaelromcar-parabol/parabol/commit/7b142eea345ff6c1eeacb681ccdcdcd5206e47f1))
+* **ci:** target branch changed to release ([bba3418](https://github.com/rafaelromcar-parabol/parabol/commit/bba341832f5870bdce961ff660f76d829390d737))
+* **ci:** testing extra-files in json ([07e4784](https://github.com/rafaelromcar-parabol/parabol/commit/07e47841ee058b8f5eb520e15b8c5474e9e401de))
+* **ci:** using a manifest config file ([fc8a644](https://github.com/rafaelromcar-parabol/parabol/commit/fc8a644a47f3d97ee1c9e7a3d4e26ab9c5b93c53))
+
 ## 6.121.0 2023-Sep-20
 
 ### Added
