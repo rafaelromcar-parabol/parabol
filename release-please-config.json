@@ -6,6 +6,23 @@
       "release-type": "node"
     }
   },
+  "changelog-sections": [
+    {
+      "type":"feat",
+      "section":"Added",
+      "hidden":false
+    },
+    {
+      "type":"fix",
+      "section":"Fixed",
+      "hidden":false
+    },
+    {
+      "type":"chore",
+      "section":"Changed",
+      "hidden":false
+    }
+  ],
   "extra-files": [
     {
       "type": "json",
