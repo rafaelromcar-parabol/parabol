@@ -2,6 +2,7 @@ on:
   push:
     branches:
       - release
+      - staging
 name: release-please
 jobs:
   release-please:
@@ -9,8 +10,7 @@ jobs:
     steps:
       - uses: google-github-actions/release-please-action@v3
         with:
-          target-branch: release
-          default-branch: release
+          default-branch: ${{ github.ref_name }}
           release-type: node
           package-name: parabol
           extra-files: |
