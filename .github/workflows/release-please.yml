@@ -11,5 +11,4 @@ jobs:
         with:
           release-type: node
           package-name: parabol
-          VersioningStrategy: always-bump-minor
           changelog-types: '[{"type":"feat","section":"Features","hidden":false},{"type":"fix","section":"Bug Fixes","hidden":false},{"type":"chore","section":"Miscellaneous","hidden":false}]'
