@@ -10,7 +10,7 @@
     {
       "type": "json",
       "path": "packages/chronos/package.json",
-      "jsonpath": ".version"
+      "jsonpath": "$.version"
     }
   ]
 }
