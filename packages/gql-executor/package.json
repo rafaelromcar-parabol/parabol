@@ -1,6 +1,6 @@
 {
   "name": "gql-executor",
-  "version": "6.121.0", -- x-release-please-version
+  "version": "6.121.0",
   "description": "A Stateless GraphQL Executor",
   "author": "Matt Krick <matt.krick@gmail.com>",
   "homepage": "https://github.com/ParabolInc/parabol/tree/master/packages/gqlExecutor#readme",
