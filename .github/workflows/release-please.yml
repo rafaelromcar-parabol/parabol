@@ -11,8 +11,7 @@ jobs:
       - uses: google-github-actions/release-please-action@v3
         with:
           default-branch: ${{ github.ref_name }}
-          release-type: node
-          package-name: parabol
+          command: manifest
           # extra-files: |
           #   packages/chronos/package.json
           #   packages/client/package.json
@@ -20,5 +19,3 @@ jobs:
           #   packages/integration-tests/package.json
           #   packages/server/package.json
           changelog-types: '[{"type":"feat","section":"Features","hidden":false},{"type":"fix","section":"Bug Fixes","hidden":false},{"type":"chore","section":"Miscellaneous","hidden":false}]'
-          bootstrap-sha: 362b80517a28dd723d7a1c8070315d5f8f0fd239
-          release-as: "6.122.0"
