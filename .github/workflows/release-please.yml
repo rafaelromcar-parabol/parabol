@@ -10,6 +10,7 @@ jobs:
       - uses: google-github-actions/release-please-action@v3
         with:
           target-branch: release
+          default-branch: release
           release-type: node
           package-name: parabol
           extra-files: |
