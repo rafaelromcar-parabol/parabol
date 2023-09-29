@@ -11,6 +11,26 @@
       "type": "json",
       "path": "packages/chronos/package.json",
       "jsonpath": "$.version"
+    },
+    {
+      "type": "json",
+      "path": "packages/client/package.json",
+      "jsonpath": "$.version"
+    },
+    {
+      "type": "json",
+      "path": "packages/gql-executor/package.json",
+      "jsonpath": "$.version"
+    },
+    {
+      "type": "json",
+      "path": "packages/integration-tests/package.json",
+      "jsonpath": "$.version"
+    },
+    {
+      "type": "json",
+      "path": "packages/server/package.json",
+      "jsonpath": "$.version"
     }
   ]
 }
