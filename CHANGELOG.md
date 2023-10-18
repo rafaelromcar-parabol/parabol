@@ -5,6 +5,21 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 This CHANGELOG follows conventions [outlined here](http://keepachangelog.com/).
 
+## [6.1002.0](https://github.com/rafaelromcar-parabol/parabol/compare/parabol-action-v6.1001.0...parabol-action-v6.1002.0) (2023-10-18)
+
+
+### Added
+
+* feature 6 directly on release ([45e2133](https://github.com/rafaelromcar-parabol/parabol/commit/45e2133588d7cf5c7cbf0c682c5d073ab8bd9b9e))
+
+
+### Changed
+
+* **ci:** adding label with release as label, to help identifying the PRs ([db508c3](https://github.com/rafaelromcar-parabol/parabol/commit/db508c3c1f2e43b898466e78167f42f48514f587))
+* **ci:** adding pull-request-title-pattern to get a prettier PR title ([8417b1b](https://github.com/rafaelromcar-parabol/parabol/commit/8417b1b94ec9019c1d379abd9e7d1db2c28910d6))
+* **ci:** include-component-in-tag and pull-request-title-pattern in package ([aecb2b4](https://github.com/rafaelromcar-parabol/parabol/commit/aecb2b4f3b1103c3be485d6c661a1a3a887fe341))
+* **ci:** release-please removed unused include-v-in-tag ([a6deef9](https://github.com/rafaelromcar-parabol/parabol/commit/a6deef92367da28768df83ff186758fa59d3ac36))
+
 ## [6.1001.0](https://github.com/rafaelromcar-parabol/parabol/compare/parabol-action-v6.1000.0...parabol-action-v6.1001.0) (2023-10-18)
 
 
