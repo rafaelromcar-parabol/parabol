@@ -1,10 +1,10 @@
 {
+  "bootstrap-sha": "5c0b283ecffed911ba263bdcdb431a13f5572820",
   "packages": {
     ".": {
       "release-type": "node",
       "pull-request-title-pattern": "chore${scope}: release ${version}",
-      "include-component-in-tag": false,
-      "bootstrap-sha": "5c0b283ecffed911ba263bdcdb431a13f5572820"
+      "include-component-in-tag": false
     }
   },
   "label": "release",
