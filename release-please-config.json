@@ -7,7 +7,7 @@
       "include-component-in-tag": false
     }
   },
-  "label": "release",
+  "extra-label": "release",
   "changelog-sections": [
     {
       "type":"feat",
