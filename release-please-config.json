@@ -4,6 +4,8 @@
       "release-type": "node"
     }
   },
+  "include-component-in-tag": "false",
+  "include-v-in-tag": "true",
   "changelog-sections": [
     {
       "type":"feat",
