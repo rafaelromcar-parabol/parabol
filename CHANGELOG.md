@@ -5,6 +5,20 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 This CHANGELOG follows conventions [outlined here](http://keepachangelog.com/).
 
+## [6.1000.0](https://github.com/rafaelromcar-parabol/parabol/compare/parabol-action-v6.999.0...parabol-action-v6.1000.0) (2023-10-18)
+
+
+### Added
+
+* feature 1 ([a3b06a8](https://github.com/rafaelromcar-parabol/parabol/commit/a3b06a85f01a8a291e52885e06ec852a06b85416))
+* feature 2 ([847c510](https://github.com/rafaelromcar-parabol/parabol/commit/847c510981bed70c7c14c8551398f59a031544d0))
+* feature 3 ([814d5db](https://github.com/rafaelromcar-parabol/parabol/commit/814d5dbf750b1f45bd23624d11a0277385addf78))
+
+
+### Fixed
+
+* **release-please:** remove release-as and bootstrap sha ([97407cf](https://github.com/rafaelromcar-parabol/parabol/commit/97407cf30c95c0723e48a8c5255ac7934fff8700))
+
 ## [6.999.0](https://github.com/rafaelromcar-parabol/parabol/compare/parabol-action-v6.121.0...parabol-action-v6.999.0) (2023-09-29)
 
 
