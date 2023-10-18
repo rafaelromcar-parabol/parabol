@@ -6,6 +6,7 @@
   },
   "pull-request-title-pattern": "chore${scope}: release ${version}",
   "include-component-in-tag": "false",
+  "label": "release",
   "changelog-sections": [
     {
       "type":"feat",
