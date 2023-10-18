@@ -5,6 +5,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 This CHANGELOG follows conventions [outlined here](http://keepachangelog.com/).
 
+## [6.1001.0](https://github.com/rafaelromcar-parabol/parabol/compare/parabol-action-v6.1000.0...parabol-action-v6.1001.0) (2023-10-18)
+
+
+### Added
+
+* feature 5 done after merging back release branch ([4246ccc](https://github.com/rafaelromcar-parabol/parabol/commit/4246ccc5bb41a30794f2b484ca3bc3bc575615cb))
+
+
+### Changed
+
+* **ci:** release-please will not include the component name in the generated tag, and it will have the v ([d089af9](https://github.com/rafaelromcar-parabol/parabol/commit/d089af98e06f75a298ab424f7c859c80218a6475))
+
 ## [6.1000.0](https://github.com/rafaelromcar-parabol/parabol/compare/parabol-action-v6.999.0...parabol-action-v6.1000.0) (2023-10-18)
 
 
