@@ -5,6 +5,39 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 This CHANGELOG follows conventions [outlined here](http://keepachangelog.com/).
 
+## [6.999.0](https://github.com/rafaelromcar-parabol/parabol/compare/parabol-action-v6.121.0...parabol-action-v6.999.0) (2023-09-29)
+
+
+### Added
+
+* **ci:** add staging branch for the Action and make the default branch dynamic ([7d6dbce](https://github.com/rafaelromcar-parabol/parabol/commit/7d6dbcee51929c5802d0ec9e8fbe7994a72d7d51))
+* **ci:** bootstrap release-please to an specific commit ([3a93f88](https://github.com/rafaelromcar-parabol/parabol/commit/3a93f88b53a8cd92b9b228a9d6806f6b6cd87ca0))
+
+
+### Fixed
+
+* **ci:** adding chronos ([d9222bb](https://github.com/rafaelromcar-parabol/parabol/commit/d9222bb6b50831ffd8ab2b801eb4dcdc2ba1c94c))
+* **ci:** adding default branch ([acf47af](https://github.com/rafaelromcar-parabol/parabol/commit/acf47af82b700218d3e33fe5b393ce12f9581f82))
+* **ci:** all package.json without the inline comment ([5709610](https://github.com/rafaelromcar-parabol/parabol/commit/57096103842feb2c06fd892614621f9bc082524b))
+* **ci:** config with all packages, manifest clean-up and action with changelog-types ([85e3e73](https://github.com/rafaelromcar-parabol/parabol/commit/85e3e7392e81e698766c5657bca2619f47eaed82))
+* **ci:** current version on manifest ([7a5054c](https://github.com/rafaelromcar-parabol/parabol/commit/7a5054c7a881c5139b4507dc954c5bc9398c8e2f))
+* **ci:** default branch to release ([88c39dc](https://github.com/rafaelromcar-parabol/parabol/commit/88c39dca8bcb326046796b39ab725cec373e2985))
+* **ci:** fix the format of the json path expression ([c7a5ef6](https://github.com/rafaelromcar-parabol/parabol/commit/c7a5ef656b5393b624d6248959c09e89e791242c))
+* **ci:** mark next version to release as 6.122.0 and add the flag to update packages versions ([718dbcd](https://github.com/rafaelromcar-parabol/parabol/commit/718dbcdd2a39496c0262b14da76204efb3e0ed0a))
+* **ci:** only manifest ([388f447](https://github.com/rafaelromcar-parabol/parabol/commit/388f447eeab3b866b841a0a25fb5120ed0169a8b))
+* **ci:** starting release on a commit pushed to this branch ([7b142ee](https://github.com/rafaelromcar-parabol/parabol/commit/7b142eea345ff6c1eeacb681ccdcdcd5206e47f1))
+* **ci:** target branch changed to release ([bba3418](https://github.com/rafaelromcar-parabol/parabol/commit/bba341832f5870bdce961ff660f76d829390d737))
+* **ci:** testing adding a default package ([bce3f11](https://github.com/rafaelromcar-parabol/parabol/commit/bce3f11375fbe22ed0bb1c1ff664654b8f0d5172))
+* **ci:** testing extra-files in json ([07e4784](https://github.com/rafaelromcar-parabol/parabol/commit/07e47841ee058b8f5eb520e15b8c5474e9e401de))
+* **ci:** testing release number ([1f83236](https://github.com/rafaelromcar-parabol/parabol/commit/1f83236da2ed435e6bcbd7b0ed20603f71fdc0f5))
+* **ci:** using a manifest config file ([fc8a644](https://github.com/rafaelromcar-parabol/parabol/commit/fc8a644a47f3d97ee1c9e7a3d4e26ab9c5b93c53))
+* **ci:** using release-please config manifest ([67827b2](https://github.com/rafaelromcar-parabol/parabol/commit/67827b206c3ddb88d0ed3a30fb7718699a53540b))
+
+
+### Changed
+
+* **ci:** chore added to the changelog ([41b2088](https://github.com/rafaelromcar-parabol/parabol/commit/41b208820039106d15803e6a8707fa1cab7349bc))
+
 ## 6.121.0 2023-Sep-20
 
 ### Added
