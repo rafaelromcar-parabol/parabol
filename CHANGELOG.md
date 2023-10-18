@@ -5,6 +5,20 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 This CHANGELOG follows conventions [outlined here](http://keepachangelog.com/).
 
+## [6.1002.1](https://github.com/rafaelromcar-parabol/parabol/compare/v6.1002.0...v6.1002.1) (2023-10-18)
+
+
+### Fixed
+
+* **ci:** adding back bootstrap-sha as the name of the release has changed ([909b1b1](https://github.com/rafaelromcar-parabol/parabol/commit/909b1b16d71b78c0094851590ac1843950ed6cc2))
+* **ci:** bootstrap-sha in the correct section ([f48b47d](https://github.com/rafaelromcar-parabol/parabol/commit/f48b47db0616cd66387fbd097dbf47ee208216e1))
+* **ci:** include-component-in-tag is now a boolean ([05f46a0](https://github.com/rafaelromcar-parabol/parabol/commit/05f46a0cdef967e08927d4d8f0d5e61259ee5d46))
+
+
+### Changed
+
+* **ci:** release tag added to the PR will be extra now ([e72f298](https://github.com/rafaelromcar-parabol/parabol/commit/e72f298e93d40669d28881e5364d3fae8481a7ee))
+
 ## [6.1002.0](https://github.com/rafaelromcar-parabol/parabol/compare/parabol-action-v6.1001.0...parabol-action-v6.1002.0) (2023-10-18)
 
 
