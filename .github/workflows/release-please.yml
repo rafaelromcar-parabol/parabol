@@ -22,6 +22,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print tag if it was a release
-        if: ${{ steps.release-please.outputs.release_created }}
         run: |
-          echo ${{ steps.release-please.outputs.tag_name }}
+          echo ${{ needs.release-please.outputs.tag_name }}
