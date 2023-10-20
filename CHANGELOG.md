@@ -5,6 +5,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 This CHANGELOG follows conventions [outlined here](http://keepachangelog.com/).
 
+## [6.1003.0](https://github.com/rafaelromcar-parabol/parabol/compare/v6.1002.1...v6.1003.0) (2023-10-20)
+
+
+### Added
+
+* **ci:** emtpy feature ([6720d6e](https://github.com/rafaelromcar-parabol/parabol/commit/6720d6ec3a9cc59eeafbdb80897472128db57704))
+* **ci:** print the tag if it was a release ([b03f19d](https://github.com/rafaelromcar-parabol/parabol/commit/b03f19dfc5716e1b4a1dda67b18cd2727db14425))
+
 ## [6.1002.1](https://github.com/rafaelromcar-parabol/parabol/compare/v6.1002.0...v6.1002.1) (2023-10-18)
 
 
