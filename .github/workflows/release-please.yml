@@ -16,6 +16,7 @@ jobs:
           command: manifest
           default-branch: release
   docker-build:
+    needs: release-please
     if: needs.release-please.outputs.release_created
     #runs-on: ubuntu-8cores
     runs-on: ubuntu-latest
