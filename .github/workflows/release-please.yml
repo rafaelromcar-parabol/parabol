@@ -6,12 +6,20 @@ name: release-please
 jobs:
   release-please:
     runs-on: ubuntu-latest
+    outputs:
+      release_created: ${{ steps.release-please.outputs.release_created }}
+      tag_name: ${{ steps.release-please.outputs.tag_name }}
     steps:
       - uses: google-github-actions/release-please-action@v3
         id: release-please
         with:
           command: manifest
           default-branch: release
+  docker-build:
+    if: needs.release-please.outputs.release_created
+    #runs-on: ubuntu-8cores
+    runs-on: ubuntu-latest
+    steps:
       - name: Print tag if it was a release
         if: ${{ steps.release-please.outputs.release_created }}
         run: |
