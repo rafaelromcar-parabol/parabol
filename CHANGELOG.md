@@ -5,6 +5,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 This CHANGELOG follows conventions [outlined here](http://keepachangelog.com/).
 
+## [6.1004.1](https://github.com/rafaelromcar-parabol/parabol/compare/v6.1004.0...v6.1004.1) (2023-10-20)
+
+
+### Fixed
+
+* **ci:** docker-build uses outputs from release-please correctly now ([7a2a3d3](https://github.com/rafaelromcar-parabol/parabol/commit/7a2a3d33b0c8b2a793b78b5aa3410dc8c750fe72))
+
 ## [6.1004.0](https://github.com/rafaelromcar-parabol/parabol/compare/v6.1003.0...v6.1004.0) (2023-10-20)
 
 
