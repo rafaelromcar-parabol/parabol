@@ -5,6 +5,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 This CHANGELOG follows conventions [outlined here](http://keepachangelog.com/).
 
+## [6.1004.0](https://github.com/rafaelromcar-parabol/parabol/compare/v6.1003.0...v6.1004.0) (2023-10-20)
+
+
+### Added
+
+* **ci:** docker-build job created ([26a4be2](https://github.com/rafaelromcar-parabol/parabol/commit/26a4be2f0c15dcf865e860e1620b3ee16279c64b))
+* **ci:** docker-build job depends on release-please job ([9f0af2c](https://github.com/rafaelromcar-parabol/parabol/commit/9f0af2c33481d722204646ef6477bb632fc8afac))
+
 ## [6.1003.0](https://github.com/rafaelromcar-parabol/parabol/compare/v6.1002.1...v6.1003.0) (2023-10-20)
 
 
