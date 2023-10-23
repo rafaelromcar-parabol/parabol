@@ -20,15 +20,6 @@ jobs:
         with:
           command: manifest
           default-branch: release
-
-  tag-release:
-    needs: release-please
-    if: needs.release.outputs.release_created
-    runs-on: ubuntu-latest
-    steps:
-      # - name: Print tag if it was a release
-      #   run: |
-      #     echo ${{ needs.release.outputs.tag_name }}
       - uses: actions/checkout@v2
       - name: tag major and minor versions
         if: ${{ steps.release.outputs.release_created }}
