@@ -1,10 +1,9 @@
-on:
-  push:
-    branches:
-      - release
-      - master
-      - hotfix-*
-      - tag
+on: [push]
+  # push:
+  #   branches:
+  #     - release
+  #     - master
+  #     - hotfix-*
 
 permissions:
   contents: write
