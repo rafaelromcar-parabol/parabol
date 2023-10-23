@@ -5,6 +5,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 This CHANGELOG follows conventions [outlined here](http://keepachangelog.com/).
 
+## [6.1005.1](https://github.com/rafaelromcar-parabol/parabol/compare/v6.1005.0...v6.1005.1) (2023-10-23)
+
+
+### Fixed
+
+* **ci:** checkout only on releases ([4e8734a](https://github.com/rafaelromcar-parabol/parabol/commit/4e8734a9a06c710de2f270262ddbbf204691efb9))
+* **ci:** in one job ([34e6f25](https://github.com/rafaelromcar-parabol/parabol/commit/34e6f25bd5a6ab7e11d40f3004ae6354c9f80cc3))
+
 ## [6.1005.0](https://github.com/rafaelromcar-parabol/parabol/compare/v6.1004.1...v6.1005.0) (2023-10-23)
 
 
