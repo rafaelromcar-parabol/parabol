@@ -4,6 +4,7 @@ on:
       - release
       - master
       - hotfix-*
+      - tag
 
 permissions:
   contents: write
@@ -22,7 +23,7 @@ jobs:
           default-branch: release
       - uses: actions/checkout@v2
         if: ${{ steps.release.outputs.release_created }}
-      - name: tag major and minor versions
+      - name: Tagging the release
         if: ${{ steps.release.outputs.release_created }}
         run: |
           git config user.name github-actions[bot]
