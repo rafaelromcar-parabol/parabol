@@ -5,6 +5,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 This CHANGELOG follows conventions [outlined here](http://keepachangelog.com/).
 
+## [6.1006.0](https://github.com/rafaelromcar-parabol/parabol/compare/v6.1005.3...v6.1006.0) (2023-10-23)
+
+
+### Added
+
+* **ci:** empty feature 1 ([8473c59](https://github.com/rafaelromcar-parabol/parabol/commit/8473c592dd078ebeaadc165963be0058a2290756))
+
 ## [6.1005.3](https://github.com/rafaelromcar-parabol/parabol/compare/v6.1005.2...v6.1005.3) (2023-10-23)
 
 
