@@ -1,5 +1,6 @@
 {
   "bootstrap-sha": "5c0b283ecffed911ba263bdcdb431a13f5572820",
+  "skip-github-release": false,
   "packages": {
     ".": {
       "release-type": "node",

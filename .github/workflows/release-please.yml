@@ -1,9 +1,4 @@
 on: [push]
-  # push:
-  #   branches:
-  #     - release
-  #     - master
-  #     - hotfix-*
 
 permissions:
   contents: write
@@ -20,6 +15,17 @@ jobs:
         with:
           command: manifest
           default-branch: release
+      - run: |
+          echo ${{ steps.release.outputs.release_created }}
+          echo ${{ steps.release.outputs.upload_url }}
+          echo ${{ steps.release.outputs.html_url }}
+          echo ${{ steps.release.outputs.tag_name }}
+          echo ${{ steps.release.outputs.major }}
+          echo ${{ steps.release.outputs.minor }}
+          echo ${{ steps.release.outputs.patch }}
+          echo ${{ steps.release.outputs.sha }}
+          echo ${{ steps.release.outputs.pr }}
+          echo ${{ steps.release.outputs.prs }}
       - uses: actions/checkout@v2
         if: ${{ steps.release.outputs.release_created }}
       - name: Tagging the release
